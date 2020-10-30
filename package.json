@@ -1,0 +1,29 @@
+{
+   "name": "gulp-optimise-rp",
+   "version": "0.1.0",
+   "private": true,
+   "description": "",
+   "scripts": {
+      "start": "gulp optimise"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/PCelestia/gulp-optimise-rp.git"
+   },
+   "author": "PCelestia",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/PCelestia/gulp-optimise-rp/issues"
+   },
+   "homepage": "https://github.com/PCelestia/gulp-optimise-rp#readme",
+   "dependencies": {
+      "@types/gulp": "^4.0.7",
+      "@types/gulp-imagemin": "^7.0.0",
+      "@types/gulp-jsonmin": "^1.1.1",
+      "gulp": "^4.0.2",
+      "gulp-imagemin": "^7.1.0",
+      "gulp-jsonmin": "^1.2.0",
+      "ts-node": "^9.0.0",
+      "typescript": "^4.0.5"
+   }
+}
