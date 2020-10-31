@@ -25,7 +25,12 @@ const jsonsrc = () => src(`${srcdir}/**/*.json`);
 const mcmetasrc = () => src(`${srcdir}/**/*.mcmeta`);
 const oggsrc = () => src(`${srcdir}/**/*.ogg`);
 
-const png = (opts) => pngsrc().pipe(imagemin(opts)).pipe(dest(`${destdir}/${optimiseddir}`));
+const png = (opts) => pngsrc().pipe(imagemin({
+   plugins: [imagemin.optipng({
+      optimizationLevel: 7
+   })],
+   verbose: opts ? opts.verbose : false
+})).pipe(dest(`${destdir}/${optimiseddir}`));
 const json = (opts) => jsonsrc().pipe(jsonmin(opts)).pipe(dest(`${destdir}/${optimiseddir}`));
 const mcmeta = (opts) => mcmetasrc().pipe(jsonmin(opts)).pipe(dest(`${destdir}/${optimiseddir}`));
 const ogg = (opts) => oggsrc().pipe(dest(`${destdir}/${optimiseddir}`));

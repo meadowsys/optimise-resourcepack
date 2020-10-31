@@ -4,8 +4,8 @@
    "private": true,
    "description": "",
    "scripts": {
-      "optimise": "gulp all",
-      "optimise:verbose": "gulp all:verbose",
+      "optimise": "gulp optimise",
+      "optimise:verbose": "gulp optimise:verbose",
       "compare": "npm run optimise && gulp copy"
    },
    "repository": {
